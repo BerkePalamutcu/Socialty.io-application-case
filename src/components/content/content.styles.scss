@@ -1,0 +1,81 @@
+$published: #acacac;
+$scheduled: #6cc283;
+$approval: #f4bf38;
+$error: #e55e4f;
+$notes: #67b0f2;
+
+@mixin colorCode {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.published {
+  @include colorCode;
+  background-color: $published;
+}
+
+.scheduled {
+  @include colorCode;
+  background-color: $scheduled;
+}
+
+.approval {
+  @include colorCode;
+  background-color: $approval;
+}
+
+.error {
+  @include colorCode;
+  background-color: $error;
+}
+
+.notes {
+  @include colorCode;
+  background-color: $notes;
+}
+
+.colorList {
+  display: flex;
+  gap: 20px;
+}
+.colorListItem {
+  display: flex;
+  align-items: center;
+}
+.contentContainer {
+  margin-left: 350px;
+  margin-top: 45px;
+  padding-bottom: 50px;
+}
+
+.topWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: calc(100vw - 400px);
+}
+.avatar {
+  display: flex;
+  border-radius: 50%;
+}
+.cardsWrapper {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+.dateHeader {
+  color: #959595;
+  font-family: 500;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.spinner{
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}

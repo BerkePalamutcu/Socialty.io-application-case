@@ -1,0 +1,176 @@
+$header-background: #31363b;
+$brands-background: #2a2f33;
+$actions-background-top: #393d42;
+
+.sidebarContainer {
+  width: 275px;
+  height: 100vh;
+  background-color: $header-background;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  margin-right: 450px;
+}
+
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.header {
+  color: black;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  user-select: none;
+  margin-left: 30px;
+}
+
+.linkSpan {
+  font-weight: 200;
+}
+
+.sidebarWrapper {
+  display: flex;
+  background-color: aliceblue;
+  height: 100%;
+}
+
+.brands {
+  width: 66px;
+  height: 100%;
+  background-color: $brands-background;
+  display: flex;
+  justify-content: center;
+}
+
+.actions {
+  width: calc(275px - 66px);
+  background-color: $actions-background-top;
+  justify-content: flex-start;
+}
+
+.mainListItem {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.mainListItem.special {
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-bottom: 13px solid #e35161;
+    border-right: 13px solid transparent;
+    rotate: 315deg;
+    margin-left: 16px;
+    transform: translateY(8px);
+  }
+}
+
+.listContent {
+  display: flex;
+  height: 128px;
+  align-items: center;
+  background-color: #32363a;
+}
+
+.listContentItem {
+  list-style: inside;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.listText {
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.special {
+  background-color: #e35161;
+  transition: all ease 0.3s;
+}
+
+.notificationsNumber {
+  border: 1px solid #8ac474;
+  display: flex;
+  padding: 0px 7px;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.listActions {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+}
+
+.listWrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.actionIcon {
+  margin-right: 10px;
+}
+
+.toggleIcon {
+  display: flex;
+  cursor: pointer;
+}
+
+.brandsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.brandImage {
+  display: flex;
+  cursor: pointer;
+  border-radius: 8px;
+  opacity: 0.2;
+  position: relative;
+  &:hover {
+    opacity: 1;
+  }
+  &:nth-child(5) {
+    opacity: 1;
+  }
+}
+.information {
+  position: absolute;
+  font-size: 10px;
+  background-color: #69c2a9;
+  padding: 5px;
+  border-radius: 50%;
+  transform: translate(25px, 50px);
+}
+
+.selectedBrand {
+  width: 5px;
+  height: 40px;
+  position: absolute;
+  background-color: #e35161;
+  z-index: 1;
+  transform: translate(-12px, 180px);
+  border-radius: 0 8px 8px 0;
+}
