@@ -8,16 +8,8 @@ const initialState: any = {
 };
 
 export const fetchApiData = createAsyncThunk('fetchData', async () => {
-  const response = await axios.get<any>(
-    'https://api.jsonbin.io/v3/b/62ed1523e13e6063dc6cd5ee',
-    {
-      headers: {
-        'X-ACCESS-KEY':
-          '$2b$10$smpejxmp4gmvulslxzJAs.gQ4v4PXntI/WeSCOOFXAd3KZl7LFJcW',
-      },
-    }
-  );
-  return response.data.record.posts_by_date;
+  const response = await axios.get<any>('http://localhost:3000/posts_by_date');
+  return response.data;
 });
 
 export const apiDataSlice = createSlice({

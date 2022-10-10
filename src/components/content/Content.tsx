@@ -15,6 +15,8 @@ const Content: React.FC<any> = () => {
   const pending: any = useAppSelector((state) => state.apiData.loading);
   const errorMessage: any = useAppSelector((state) => state.apiData.error);
 
+  console.log(apiData);
+
   React.useEffect(() => {
     dispatch(fetchApiData());
   }, []);
